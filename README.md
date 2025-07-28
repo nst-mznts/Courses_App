@@ -45,7 +45,7 @@ To set up and run the project, follow these steps:
 Clone the backend code and install its dependencies:
 
    ```bash
-   git clone https://github.com/nst-mznts/Project-Management-App.git -b backend
+   git clone https://github.com/nst-mznts/Courses_App_Backend.git
    npm install
    ```
 
