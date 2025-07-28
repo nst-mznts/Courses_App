@@ -1,0 +1,83 @@
+@forward "../../../../sass/abstract/placeholders";
+@forward "../../../../sass/wrappers";
+@forward "../../../../sass/text";
+@forward "../../../../sass/card";
+@use "../../../../sass/abstract/constants" as constants;
+@use "../../../../sass/abstract/mixins" as mixins;
+
+.card {
+    @extend %width100;
+    padding: 30px;
+    @extend %card-base;
+    position: relative;
+    @include mixins.flex(flex-start, flex-start);
+    row-gap: 10px;
+    overflow: hidden;
+}
+
+.card--indicator {
+    width: 8px;
+    height: 100%;
+    background-color: constants.$color-secondary;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.card--header {
+    @extend %width100;
+    @include mixins.flex(center, flex-start);
+    row-gap: 10px;
+}
+
+.card--content {
+    @extend %width100;
+    height: 100%;
+    @include mixins.flex(space-between, flex-start);
+    gap: 20px;
+}
+
+.card--description {
+    width: 65%;
+    height: 100%;
+}
+
+.card--duration {
+    width: 35%;
+    height: 100%;
+    @include mixins.flex(space-between, flex-start);
+    row-gap: 10px;
+}
+
+.card-button-wrapper {
+    @extend %width100;
+    @include mixins.flex(flex-start, center);
+    gap: 10px;
+}
+
+@media (max-width: 900px) {
+    .card {
+        & .card--description,
+        & .card--duration {
+            width: 100%;
+        }
+
+        & .card--content {
+            flex-direction: column;
+        }
+
+        @media (max-width: 426px) {
+            width: 380px;
+        }
+
+        @media (max-width: 400px) {
+            width: 330px;
+        }
+
+        @media (max-width: 375px) {
+            width: 300px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@forward "./abstract/placeholders";
+
+%card-base {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.4);
+    @extend %border-radius;
+    @extend %card-shadow;
+}

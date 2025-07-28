@@ -1,0 +1,17 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/text";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.empty-course--wrapper {
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.empty-course {
+    width: 100%;
+    height: 80%;
+    @include mixins.flex(center, center);
+    row-gap: 20px;
+}

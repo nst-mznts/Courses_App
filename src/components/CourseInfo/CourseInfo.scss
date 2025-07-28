@@ -1,0 +1,83 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/text";
+@forward "../../sass/card";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.current-course--wrapper {
+    @extend %width100;
+    @include mixins.flex(center, flex-end);
+    row-gap: 40px;
+}
+
+.current-course {
+    @extend %width100;
+    @include mixins.flex(space-between, flex-start);
+    row-gap: 20px;
+    padding: 40px;
+    @extend %card-base;
+}
+
+.current-course--content {
+    @extend %width100;
+    @include mixins.flex(space-between, flex-start);
+    column-gap: 20px;
+}
+
+.current-course--description {
+    width: 50%;
+}
+
+.current-course--duration {
+    width: 50%;
+}
+
+.current-course--line {
+    display: block;
+    width: 1px;
+    height: 200px;
+    background-color: constants.$color-additional;
+}
+
+.info-duration--line {
+    @extend %width100;
+    @include mixins.flex(flex-start, center);
+    column-gap: 16px;
+}
+
+@media (max-width: 900px) {
+
+    .current-course {
+        padding: 20px;
+
+        @media (max-width: 426px) {
+            width: 380px;
+        }
+
+        @media (max-width: 400px) {
+            width: 330px;
+        }
+
+        @media (max-width: 375px) {
+            width: 300px;
+        }
+    }
+
+    .current-course .current-course--content {
+        flex-direction: column;
+    }
+
+    .current-course--description, .current-course--duration {
+        width: 100%;
+    }
+
+    .current-course--line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+        background-color: constants.$color-additional;
+    }
+
+}

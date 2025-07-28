@@ -1,0 +1,82 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+%gradient-color {
+    background: linear-gradient(45deg, #4a96e0, #716df2, #ac43d9);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin button-font($font-size, $color) {
+    @extend %font-primary;
+    @include mixins.font(normal, 700, $font-size);
+    color: $color;
+}
+
+.button {
+    display: flex;
+    @include mixins.flex(center, center);
+    @extend %cursor-pointer;
+}
+
+.rectangular-button {
+    padding: 10px 20px;
+    border: none;
+    @extend %border-radius;
+    @include button-font(constants.$font-size-standart, constants.$color-light);
+}
+
+.round-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include button-font(2rem, constants.$color-button);
+}
+
+.bordered {
+    height: 42px;
+    border: 2px solid constants.$color-button;
+    background-color: transparent;
+    color: constants.$color-button;
+
+    &:hover {
+        background-color: rgba(constants.$color-button, 0.2);
+    }
+}
+
+.colored {
+    @extend %gradient-color;
+    background-position: left center;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-size: 200%;
+        background-position: right center;
+    }
+}
+
+.large {
+    min-width: 180px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+@media (max-width: 640px) {
+    .rectangular-button {
+        font-size: 1.2rem;
+    }
+
+    .large {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 321px) {
+    .rectangular-button {
+        font-size: 1rem;
+    }
+}

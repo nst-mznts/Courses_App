@@ -1,0 +1,34 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/card";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+label {
+    @extend %width100;
+}
+
+.input-container {
+    @extend %width100;
+    @include mixins.flex(space-between, center);
+    gap: 10px;
+}
+
+.input {
+    @extend %width100;
+    outline: none;
+    border: 1px solid transparent;
+    @extend %card-base;
+    padding: 10px;
+    @extend %font-primary;
+    resize: none;
+
+    &:focus-within {
+        border: 1px solid constants.$color-button;
+    }
+}
+
+.invalid {
+    border: 1px solid constants.$color-error;
+    box-shadow: none;
+}

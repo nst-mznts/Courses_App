@@ -1,0 +1,24 @@
+.wrapper {
+    width: 1240px;
+}
+
+.main--wrapper {
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 40px;
+    padding: 80px 20px;
+}
+
+.flex--column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex--row {
+    display: flex;
+    flex-direction: row;
+}
+
+.width100 {
+    width: 100%;
+}

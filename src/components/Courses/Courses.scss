@@ -1,0 +1,22 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.serch--wrapper {
+    @extend %width100;
+    @include mixins.flex(space-between, center);
+}
+
+.card--wrapper {
+    @extend %width100;
+    @include mixins.flex(space-between, flex-start);
+    row-gap: 20px;
+}
+
+@media (max-width: 640px) {
+    main .serch--wrapper {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

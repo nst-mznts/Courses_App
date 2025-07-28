@@ -1,0 +1,11 @@
+@forward "../../../../sass/abstract/placeholders";
+@forward "../../../../sass/wrappers";
+@use "../../../../sass/abstract/constants" as constants;
+@use "../../../../sass/abstract/mixins" as mixins;
+
+.author-line {
+    @extend %width100;
+    @include mixins.flex(space-between, center);
+    gap: 10px;
+    padding: 4px 0;
+}

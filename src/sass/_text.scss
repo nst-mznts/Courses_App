@@ -1,0 +1,29 @@
+.title--h3 {
+    font-style: normal;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.title--h4 {
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text--b1 {
+    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.text--b2 {
+    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+@media (max-width: 375px) {
+    .text--b1 {
+       font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,51 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/text";
+@forward "../../sass/card";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.registration--wrapper {
+    @extend %width100;
+    @include mixins.flex(center, center);
+    row-gap: 20px;
+}
+
+.form--wrapper {
+    @extend %card-base;
+    padding: 40px;
+    @include mixins.flex(center, center);
+}
+
+.form--text {
+    @include mixins.flex(center, center);
+    gap: 4px;
+}
+
+.register--size {
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.form-size--small {
+    width: 300px;
+}
+
+form {
+    row-gap: 20px;
+}
+
+.form-footer {
+    @include mixins.flex(center, center);
+    gap: 8px;
+}
+
+.error-color {
+    color: constants.$color-error;
+}
+
+@media (max-width: 375px) {
+    .form-size--small {
+        width: 260px;
+    }
+}

@@ -1,0 +1,26 @@
+@forward "../../../../sass/abstract/placeholders";
+@forward "../../../../sass/wrappers";
+@forward "../../../../sass/text";
+@use "../../../../sass/abstract/constants" as constants;
+@use "../../../../sass/abstract/mixins" as mixins;
+
+.duration--info {
+    @extend %width100;
+    @include mixins.flex(center, flex-start);
+}
+
+.duration--line {
+    @extend %width100;
+    @include mixins.flex(flex-start, center);
+    column-gap: 8px;
+}
+
+.line--title {
+    flex-shrink: 0;
+}
+
+.duration--line:nth-child(1) p:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

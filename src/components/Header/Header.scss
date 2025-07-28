@@ -1,0 +1,19 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/text";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.header--wrapper {
+    @include mixins.flex(space-between, center);
+    padding: 16px 20px;
+}
+
+.header-username-wrapper {
+    @include mixins.flex(space-between, center);
+    column-gap: 20px;
+}
+
+.username-color {
+    color: constants.$color-text;
+}

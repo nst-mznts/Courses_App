@@ -1,0 +1,93 @@
+@forward "../../sass/abstract/placeholders";
+@forward "../../sass/wrappers";
+@forward "../../sass/card";
+@use "../../sass/abstract/constants" as constants;
+@use "../../sass/abstract/mixins" as mixins;
+
+.edit--wrapper {
+    @extend %width100;
+    row-gap: 20px;
+}
+
+.form--wrapper {
+    @extend %card-base;
+    padding: 40px;
+    @include mixins.flex(center, center);
+}
+
+.edit--size {
+    @extend %width100;
+}
+
+.form-size--large {
+    width: 90%;
+}
+
+.form-section {
+    @extend %width100;
+    @include mixins.flex(center, flex-start);
+    gap: 20px;
+}
+
+.form-section--half {
+    width: 60%;
+    @include mixins.flex(center, flex-start);
+    gap: 20px;
+}
+
+.section-line {
+    @extend %width100;
+    @include mixins.flex(center, flex-start);
+    column-gap: 20px;
+}
+
+.duration-style {
+    width: 180px;
+    display: block;
+}
+
+.authors-section {
+    width: 40%;
+    @include mixins.flex(flex-start, center);
+    column-gap: 20px;
+    padding-left: 20px;
+}
+
+.button--wrapper {
+    @extend %width100;
+    @include mixins.flex(flex-end, center);
+    column-gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .form--wrapper {
+        padding: 20px;
+
+        & .form-size--large {
+            width: 100%;
+        }
+
+        & .form-section--half {
+            width: 100%;
+        }
+
+        & .author {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        & .authors-section {
+            width: 100%;
+            padding-left: 0;
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .form--wrapper .duration-style {
+        width: 140px;
+        display: block;
+    }
+}
