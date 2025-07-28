@@ -46,6 +46,7 @@ Clone the backend code and install its dependencies:
 
    ```bash
    git clone https://github.com/nst-mznts/Courses_App_Backend.git
+   cd Courses_App_Backend
    npm install
    ```
 
@@ -55,12 +56,13 @@ Clone the frontend code and install its dependencies:
    
    ```bash
    git clone https://github.com/nst-mznts/Courses_App.git
+   cd Courses_App
    npm install
    ```
 
 **3. Run the Backend**
 
-Start the backend:
+In the backend folder, start the backend:
 
    ```bash
    npm run start
@@ -68,7 +70,7 @@ Start the backend:
 
 **4. Run the Frontend**
 
-Start the frontend:
+In the frontend folder, start the frontend:
    
    ```bash
    npm run start
