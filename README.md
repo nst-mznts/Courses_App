@@ -6,11 +6,11 @@ This is a React application for selecting training courses. It features user aut
 
 ## Screenshots
 
-![project image large screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App.png)
+![project image large screen](https://github.com/nst-mznts/Courses_App/blob/main/public/Courses_App.png)
 
-![project image medium screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App_medium.png)
+![project image medium screen](https://github.com/nst-mznts/Courses_App/blob/main/public/Courses_App_medium.png)
 
-![project image small screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App_small.png)
+![project image small screen](https://github.com/nst-mznts/Courses_App/blob/main/public/Courses_App_small.png)
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
