@@ -1,77 +1,77 @@
-# Courses App Template
+# 🎓 Courses App
 
-## Where to put your code?
+## Description
 
-So, we already prepared basis for your `React` application.
+This is a React application for selecting training courses. It features user authentication, role-based access (admin and regular users), and search functionality. Admins can manage courses, while regular users can view course details. All data is fetched from the backend and managed with Redux.
 
-It means we have added all required dependencies and setup everything, so you don't need to start `React` project by yourself.
+## Screenshots
 
-There are already predefined files:
+![project image large screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App.png)
 
--   `src/App.tsx`: main application component, we expect you to render components you create inside of it;
--   `index.html`: HTML page we render our application;
--   `src/main.tsx`: our application entry point, here you must put the logic for rendering `<App>` component and putting it on the page. By default it is empty.
-- Other files you see also have their purpose, so please, don't delete them.
+![project image medium screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App_medium.png)
 
-### Please, read carefully all recommendations below:
+![project image small screen](https://github.com/nst-mznts/Courses_App/blob/public/Courses_App_small.png)
 
-1. **You must import and render your component(s) inside `src/App.tsx` file, otherwise we can't verify your solution!**
+## Tech Stack
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-2. **You have to render `<App>` component inside of the element with `"root"` id! All the logic for putting `<App>` component inside the `index.html` page, you have to write in the `src/main.tsx` file! Otherwise we can't verify your solution.**
+## Features
 
-3. We suggest creating separate files for components your are writing. For instance, if task description says creating a header component, you create a file `src/components/Header.tsx` and put inside all the code, and export the component as a result.
+- **User Authentication:** Users can register a new profile or log in with an existing one.
+- **Role-Based Access:** Regular users can view detailed information about courses. Admins can create, edit, and delete courses.
+- **Routing:** The app uses routing to navigate between pages.
+- **Search Functionality:** Users can filter courses by keywords in the course title or description.
+- **State Management with Redux:** Information about users, courses, and authors is stored and managed in the Redux store.
+- **Backend Integration:** All data about courses and authors is fetched from the backend.
+- **Responsive Design:** The app works well and looks good on different screen sizes.
 
-    After that you import you new component to the `src/App.tsx` and render it inside, for examples like this:
+## Requirements
 
-    `src/components/Header.tsx`:
+Before you can run the project, make sure you have the following installed on your machine:
 
-    ```tsx
-    function Header() {
-        return <header>Hello, I am header</header>;
-    }
+- [Node.js](https://nodejs.org/) (Recommended version: v14 or higher)
+- [npm](https://www.npmjs.com/) (Comes with Node.js)
 
-    export default Header;
-    ```
+## Installation
 
-    `src/App.tsx`:
+To set up and run the project, follow these steps:
 
-    ```tsx
-    import Header from "./components/Header";
+**1. Clone the Backend Repository**
 
-    function App() {
-        return <Header />;
-    }
+Clone the backend code and install its dependencies:
 
-    export default App;
-    ```
+   ```bash
+   git clone https://github.com/nst-mznts/Project-Management-App.git -b backend
+   npm install
+   ```
 
-4. If task says you need applying styles, please, import them directly to a component file like this:
+**2. Clone the Frontend Repository**
 
-    `src/components/MyComponent.css`:
+Clone the frontend code and install its dependencies:
+   
+   ```bash
+   git clone https://github.com/nst-mznts/Courses_App.git
+   npm install
+   ```
 
-    ```css
-    .my-component {
-        color: red;
-    }
-    ```
+**3. Run the Backend**
 
-    `src/components/MyComponent.tsx`:
+Start the backend:
 
-    ```tsx
-    import "./MyComponent.css";
+   ```bash
+   npm run start
+   ```
 
-    function MyComponent() {
-        return <div className="my-component">Hello, I am component</div>;
-    }
+**4. Run the Frontend**
 
-    export default MyComponent;
-    ```
+Start the frontend:
+   
+   ```bash
+   npm run start
+   ```
 
-5. To run application in development mode, just run in the terminal (`command line, Bash, Git Bash`):
-
-    ```bash
-    npm start
-    ```
-
-    It starts application and updates it when you change something.
-
+A link will appear in the console: `http://localhost:5173/`. Open it in your browser to use the app.
